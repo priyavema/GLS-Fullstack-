@@ -1,5 +1,21 @@
-$( document ).ready(function() {
-$.getJSON("guide.json", function(json) {
-    console.log(json); // this will show the info it in firebug console
-});
-});
+$(function(){
+    
+         $.ajax({
+             type:'GET',
+             url: 'simple.json',
+             dataType:'JSON',
+             success:function(data){
+                 $.each(data.steps, function(key, val){
+                    console.log(val.selector);
+                    $(val.selector+ '> .tooltiptext').text(val.content);
+                   
+                   
+                 })
+             },
+             error:function(){
+                                 
+             }
+         });
+         
+         
+         });
