@@ -4,6 +4,7 @@
 	<title>GLS Fullstack Exercise</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="player.js"></script>
+	<link rel="stylesheet" href="style.css" />
 	<style type="text/css">
 .myClass1 {padding: 10px 20px;border: 1px solid green;margin-bottom: 50px;}
 
@@ -14,10 +15,18 @@
 </head>
 <body>
 	<h1>GLS Fullstack Exercise</h1>
-	<div class="myClass1" id="id_1">First tip on me using id.</div>
+	<div class="myClass1 tooltip" id="id_1">First tip on me using id.
+        <span class="tooltiptext "></span>
+    </div>
 
-	<div class="myClass2">Second tip on me using class.</div>
 
-	<div class="myClass3">I am the 3rd div. 3rd tip on me using xpath.</div>
+	<div class="myClass2 tooltip">Second tip on me using class.
+        <span class="tooltiptext "></span>
+    </div>
+
+	<div class="myClass3 tooltip">I am the 3rd div. 3rd tip on me using xpath.
+        <span class="tooltiptext "></span>
+    </div>
 </body>
+
 </html>
