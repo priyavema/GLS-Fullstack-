@@ -14,20 +14,23 @@ $(function(){
                   });
                  callTooltip(data);
              },
-             error:function(){
-                                 
+             error:function(){                      
+           
+                alert('error occured.');
              }
-            
          });
 
-        function callTooltip(result){
-         for(var i =0;i < result.steps.length;i++)
-            {
-                
-            var item = result.steps[i];
-            console.log(item.content);
-            
+        function callTooltip(result){     
+        var i = 0;
+        function setDelay() {
+        
+            $(result.steps[i].selector+ '> .tooltiptext').show();
+            i++;
+            if( i < result.steps.length ){
+                setTimeout( f, 1000 );
             }
-        }    
-         
+        }
+        setDelay();
+        }
+
          });
