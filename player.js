@@ -22,15 +22,19 @@ $(function(){
 
         function callTooltip(result){     
         var i = 0;
-        function setDelay() {
+        function f() {
         
-            $(result.steps[i].selector+ '> .tooltiptext').show();
+            $(result.steps[i].selector+ '> .tooltiptext').css("display","block");
             i++;
             if( i < result.steps.length ){
                 setTimeout( f, 1000 );
+                
             }
         }
-        setDelay();
+        f();
         }
+$(document).on('click','body',function(){ 
+  $('.tooltip > .tooltiptext').css("display","none");
+});
 
          });
